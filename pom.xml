@@ -159,25 +159,29 @@
       <version>0.3</version>
       <scope>compile</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.openoffice/ridl -->
     <dependency>
-      <groupId>com.sun.star</groupId>
-      <artifactId>ridl</artifactId>
-      <version>3.2.1</version>
+        <groupId>org.openoffice</groupId>
+        <artifactId>ridl</artifactId>
+        <version>3.2.1</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.openoffice/unoil -->
     <dependency>
-      <groupId>com.sun.star</groupId>
-      <artifactId>unoil</artifactId>
-      <version>3.2.1</version>
+        <groupId>org.openoffice</groupId>
+        <artifactId>unoil</artifactId>
+        <version>3.2.1</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.openoffice/juh -->
     <dependency>
-      <groupId>com.sun.star</groupId>
-      <artifactId>juh</artifactId>
-      <version>3.2.1</version>
+        <groupId>org.openoffice</groupId>
+        <artifactId>juh</artifactId>
+        <version>3.2.1</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.openoffice/jurt -->
     <dependency>
-      <groupId>com.sun.star</groupId>
-      <artifactId>jurt</artifactId>
-      <version>3.2.1</version>
+        <groupId>org.openoffice</groupId>
+        <artifactId>jurt</artifactId>
+        <version>3.2.1</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/commons-cli/commons-cli -->
     <dependency>
@@ -195,10 +199,11 @@
       <artifactId>json</artifactId>
       <version>20080701</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.artofsolving.jodconverter/jodconverter-core -->
     <dependency>
-      <groupId>com.artofsolving</groupId>
-      <artifactId>jodconverter</artifactId>
-      <version>3.0-beta-4</version>
+        <groupId>org.artofsolving.jodconverter</groupId>
+        <artifactId>jodconverter-core</artifactId>
+        <version>3.0-beta-4</version>
     </dependency>
     <dependency>
       <groupId>org.tei</groupId>
