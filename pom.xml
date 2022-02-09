@@ -25,7 +25,7 @@
   </build> -->
   <groupId>uk.ac.ox.oucs.oxgarage.oo</groupId>
   <artifactId>oo-converter</artifactId>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.1</version>
   <name>OxGarage OO Converter</name>
   <properties>
 
