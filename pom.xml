@@ -25,7 +25,7 @@
   </build> -->
   <groupId>uk.ac.ox.oucs.oxgarage.oo</groupId>
   <artifactId>oo-converter</artifactId>
-  <version>1.0</version>
+  <version>1.1</version>
   <name>OxGarage OO Converter</name>
   <properties>
 
@@ -36,8 +36,8 @@
     <project.reporting.outputEncoding>
       UTF-8
     </project.reporting.outputEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
- 	<maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>11</maven.compiler.source>
+ 	<maven.compiler.target>11</maven.compiler.target>
   </properties>
 
 
@@ -105,7 +105,7 @@
       <organization>PSNC</organization>
     </developer>
   </developers>
-  <reporting>
+  <!--<reporting>
     <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -145,59 +145,59 @@
         </configuration>
       </plugin>
     </plugins>
-  </reporting>
+  </reporting>-->
   <dependencies>
     <dependency>
       <groupId>pl.psnc.dl.ege</groupId>
       <artifactId>ege-api</artifactId>
-      <version>0.2.1</version>
+      <version>0.4.0</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>pl.psnc.dl.ege</groupId>
       <artifactId>ege-framework</artifactId>
-      <version>0.3</version>
+      <version>0.5</version>
       <scope>compile</scope>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.openoffice/ridl -->
     <dependency>
         <groupId>org.openoffice</groupId>
         <artifactId>ridl</artifactId>
-        <version>3.2.1</version>
+        <version>4.1.2</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.openoffice/unoil -->
     <dependency>
         <groupId>org.openoffice</groupId>
         <artifactId>unoil</artifactId>
-        <version>3.2.1</version>
+        <version>4.1.2</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.openoffice/juh -->
     <dependency>
         <groupId>org.openoffice</groupId>
         <artifactId>juh</artifactId>
-        <version>3.2.1</version>
+        <version>4.1.2</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.openoffice/jurt -->
     <dependency>
         <groupId>org.openoffice</groupId>
         <artifactId>jurt</artifactId>
-        <version>3.2.1</version>
+        <version>4.1.2</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/commons-cli/commons-cli -->
     <dependency>
         <groupId>commons-cli</groupId>
         <artifactId>commons-cli</artifactId>
-        <version>1.1</version>
+        <version>1.5.0</version>
     </dependency>
     <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
-      <version>2.4</version>
+      <version>2.11.0</version>
     </dependency>
     <dependency>
       <groupId>org.json</groupId>
       <artifactId>json</artifactId>
-      <version>20080701</version>
+      <version>20211205</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.artofsolving.jodconverter/jodconverter-core -->
     <dependency>
@@ -208,7 +208,7 @@
     <dependency>
       <groupId>org.tei</groupId>
       <artifactId>tei-javalib</artifactId>
-      <version>0.5</version>
+      <version>0.6</version>
       <scope>compile</scope>
     </dependency>
   </dependencies>
@@ -224,4 +224,11 @@
 			<url>https://maven.pkg.github.com/TEIC/*</url>
 		</repository>
 	</repositories>   
+<distributionManagement>
+   <repository>
+     <id>githubtei</id>
+     <name>GitHub TEIC Apache Maven Packages</name>
+     <url>https://maven.pkg.github.com/TEIC/oo-converter</url>
+   </repository>
+</distributionManagement>
 </project>
