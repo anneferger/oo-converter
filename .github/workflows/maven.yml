@@ -37,5 +37,5 @@ jobs:
     - name: Upload Maven build artifact
       uses: actions/upload-artifact@v2
       with:
-        name: oo-converter-1.0.jar
-        path: /home/runner/work/oo-converter/oo-converter/target/oo-converter-1.0.jar
+        name: artifact
+        path: /home/runner/work/oo-converter/oo-converter/target/oo-converter-1.1.1-SNAPSHOT.jar
