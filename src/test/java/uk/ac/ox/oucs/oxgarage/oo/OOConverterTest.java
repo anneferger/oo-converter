@@ -40,7 +40,7 @@ public class OOConverterTest {
         inputType = new DataType("docx","application/vnd.openxmlformats-officedocument.wordprocessingml.document");
         outputType = new DataType("txt","text/plain");
         conversionActionArguments = new ConversionActionArguments(inputType, outputType, null);
-        converter.convert(is, os, conversionActionArguments);
+        converter.convert(is, os, conversionActionArguments, tempDir);
         assertNotNull(new File("src/test/resources/test-output.txt.zip"));
         is.close();
         os.close();
