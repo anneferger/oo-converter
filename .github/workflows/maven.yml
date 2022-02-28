@@ -21,7 +21,7 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
-    - run: mkdir /var/cache/oxgarage/temp
+    - run: mkdir -p /var/cache/oxgarage/temp
         
     - name: maven-settings
       uses: s4u/maven-settings-action@v2
