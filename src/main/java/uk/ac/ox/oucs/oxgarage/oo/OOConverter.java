@@ -74,12 +74,16 @@ public class OOConverter implements Converter {
 			converter[i] = null;
 		}
 	}
+	public void convert(InputStream inputStream, OutputStream outputStream,
+						final ConversionActionArguments conversionDataTypes) throws ConverterException, IOException{
+		convert(inputStream, outputStream,conversionDataTypes, null);
+	}
 
 	public void convert(InputStream inputStream, OutputStream outputStream,
-			final ConversionActionArguments conversionDataTypes)
+			final ConversionActionArguments conversionDataTypes, String tempDir)
 			throws ConverterException, IOException {
 		try {
-			transform(inputStream, outputStream, conversionDataTypes.getInputType(),  conversionDataTypes.getOutputType());
+			transform(inputStream, outputStream, conversionDataTypes.getInputType(), conversionDataTypes.getOutputType(), tempDir);
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new ConverterException(e.getMessage());
@@ -91,10 +95,18 @@ public class OOConverter implements Converter {
 	}
 
 	private File prepareTempDir() {
+		return prepareTempDir(null);
+	}
+	private File prepareTempDir(String tempDir) {
 		File inTempDir = null;
 		String uid = UUID.randomUUID().toString();
-		inTempDir = new File(EGEConstants.TEMP_PATH + File.separator + uid
-				+ File.separator);
+		if(tempDir!=null){
+			inTempDir = new File(tempDir + File.separator + uid
+					+ File.separator);
+		} else {
+			inTempDir = new File(EGEConstants.TEMP_PATH + File.separator + uid
+					+ File.separator);
+		}
 		inTempDir.mkdir();
 		return inTempDir;
 	}
@@ -133,10 +145,10 @@ public class OOConverter implements Converter {
 		return null;
 	}
 
-	private void transform(InputStream inputStream, OutputStream outputStream, DataType input, DataType output) 
+	private void transform(InputStream inputStream, OutputStream outputStream, DataType input, DataType output, String tempDir)
 			throws IOException, ConverterException {
-		File inTmpDir = prepareTempDir();
-		File outTmpDir = prepareTempDir();
+		File inTmpDir = prepareTempDir(tempDir);
+		File outTmpDir = prepareTempDir(tempDir);
 		try {
 			String inputExt = OOConfiguration.getExtension(input);
 			File inTmpFile = prepareInputData(inputStream, inTmpDir, inputExt);

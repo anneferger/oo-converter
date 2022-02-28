@@ -29,7 +29,8 @@ public class OOConverterTest {
         DataType inputType = new DataType("txt","text/plain");
         DataType outputType = new DataType("pdf","application/pdf");
         ConversionActionArguments conversionActionArguments = new ConversionActionArguments(inputType, outputType, null);
-        converter.convert(is, os, conversionActionArguments);
+        String tempDir = "src/test/temp";
+        converter.convert(is, os, conversionActionArguments, tempDir);
         assertNotNull(new File("src/test/resources/test-output.pdf.zip"));
         is.close();
         os.close();
