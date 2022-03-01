@@ -1,10 +1,13 @@
 package uk.ac.ox.oucs.oxgarage.oo;
 
+import pl.psnc.dl.ege.configuration.EGEConfigurationManager;
 import pl.psnc.dl.ege.exception.ConverterException;
 import pl.psnc.dl.ege.types.ConversionActionArguments;
 import pl.psnc.dl.ege.types.DataType;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 import static org.junit.Assert.*;
 
@@ -42,13 +45,18 @@ public class OOConverterTest {
         conversionActionArguments = new ConversionActionArguments(inputType, outputType, null);
         converter.convert(is, os, conversionActionArguments, tempDir);
         assertNotNull(new File("src/test/resources/test-output.txt.zip"));
+        InputStream isout = new FileInputStream("src/test/resources/test-output.txt.zip");
+        EGEConfigurationManager.getInstance().getStandardIOResolver().decompressStream(isout, new File("src/test/resources/test-output.txt"));
+        //System.out.println(new String(Files. readAllBytes(Paths.get("src/test/resources/test-output.txt/result.txt")), "UTF-8"));
+        assertNotEquals("", new String(Files.readAllBytes(Paths.get("src/test/resources/test-output.txt/result.txt")), "UTF-8"));
         is.close();
         os.close();
+        isout.close();
     }
 
     @org.junit.Test
     public void getPossibleConversions() {
         assertNotNull(converter.getPossibleConversions());
-        System.out.println(converter.getPossibleConversions());
+        //System.out.println(converter.getPossibleConversions());
     }
 }
