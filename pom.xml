@@ -25,7 +25,7 @@
   </build> -->
   <groupId>uk.ac.ox.oucs.oxgarage.oo</groupId>
   <artifactId>oo-converter</artifactId>
-  <version>1.1</version>
+  <version>1.1.1</version>
   <name>OxGarage OO Converter</name>
   <properties>
 
@@ -210,6 +210,13 @@
       <artifactId>tei-javalib</artifactId>
       <version>0.6</version>
       <scope>compile</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/junit/junit -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
    <repositories>
