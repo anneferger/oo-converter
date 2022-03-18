@@ -23,9 +23,7 @@ jobs:
         distribution: 'adopt'
     - name: Install libreoffice
       run: |
-        sudo apt-get update
-        sudo apt-get install libreoffice
-        sudo ln -s /usr/lib/libreoffice /usr/lib/openoffice      
+        sudo bash required.sh     
     - name: maven-settings
       uses: s4u/maven-settings-action@v2
       with:
