@@ -4,7 +4,8 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import pl.psnc.dl.ege.types.DataType;
 import pl.psnc.dl.ege.types.ConversionActionArguments;
@@ -23,7 +24,7 @@ import pl.psnc.dl.ege.configuration.EGEConstants;
 
 public class OOConversionsFamily {
 
-	private static final Logger LOGGER = Logger.getLogger(OOConversionsFamily.class);
+	private static final Logger LOGGER = LogManager.getLogger(OOConversionsFamily.class);
 
 	public static OOConversionsFamily TEXT;
 

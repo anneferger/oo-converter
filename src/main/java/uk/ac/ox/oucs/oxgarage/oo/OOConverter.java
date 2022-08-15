@@ -10,7 +10,8 @@ import java.util.ArrayList;
 import java.util.UUID;
 import java.util.regex.Pattern;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import org.artofsolving.jodconverter.OfficeDocumentConverter;
 import org.artofsolving.jodconverter.office.OfficeManager;
@@ -43,7 +44,7 @@ import pl.psnc.dl.ege.utils.IOResolver;
 
 public class OOConverter implements Converter {
 
-	private static final Logger LOGGER = Logger.getLogger(OOConverter.class);
+	private static final Logger LOGGER = LogManager.getLogger(OOConverter.class);
 
 	// Array of portNumbers that the converter can use to launch OpenOffice. 
 	// The ones at the beginning are likely to be used more often.
